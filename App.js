@@ -3,7 +3,7 @@ import {Text, View, FlatList } from 'react-native';
 import estilo from '.components/estiloApp';
 
 const request = async (callback) => {
-  const response = await TouchableWithoutFeedbackComponent('https://24pullrequests.com/users.json?page=2');
+  const response = await fetch('https://24pullrequests.com/users.json?page=2');
   const parsed = await response.json();
   callback(parsed.result);
 }
